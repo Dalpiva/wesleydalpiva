@@ -68,26 +68,29 @@ export default function TerminalHero() {
       {/* TYPEWRITER */}
       {(phase === "typing" || phase === "done") && (
         <pre>
-{mainText}
-{step !== "main" && (
-  <a
-    href="https://quatroin.com.br"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    {linkText}
-  </a>
-)}
-{"\n\n> "}
+          {mainText}
+          {step !== "main" && (
+            <a
+              href="https://quatroin.com.br"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {linkText}
+            </a>
+          )}
+          {"\n\n> "}
 
-{history.map((cmd, i) => (
-  <div key={i}>{`> ${cmd}`}</div>
-))}
-
-{`${input}`}
-{step === "done" && <Cursor />}
-
-
+          {/* HISTÓRICO */}
+          {history.map((item, i) => (
+            <div key={i}>
+              {item.value}
+            </div>
+          ))}
+          {step === "done" && (
+            <>
+              <div>{`> ${input}`}<Cursor /></div>
+            </>
+          )}
         </pre>
       )}
     </div>
