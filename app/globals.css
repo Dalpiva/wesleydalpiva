@@ -21,6 +21,9 @@ pre {
   white-space: pre-wrap;
 }
 
+pre div {
+  display: block;
+}
 .cursor {
   display: inline-block;
   animation: blink 1s step-start infinite;

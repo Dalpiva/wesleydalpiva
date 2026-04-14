@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTerminalSequence } from "../hooks/useTerminalSequence";
 import { useTypewriter } from "../hooks/useTypewriter";
 import Cursor from "./Cursor";
+import { useTerminalInput } from "../hooks/useTerminalInput";
 
 const BEFORE_LINK = ` __      __      _            ___       _      _          
  \\ \\    / /__ __| |___ _  _  |   \\ __ _| |_ __(_)_ ____ _ 
@@ -14,12 +15,12 @@ const BEFORE_LINK = ` __      __      _            ___       _      _
 > summary
 Olá, me chamo Wesley Dalpiva. Sou apaixonado por aprender e resolver problemas.
 
-> Main Stack:
+> main Stack:
 - Python
 - Flutter (Dart)
 - Next.js
 
-## Low level:
+## low level:
 - C/C++
 - EasyEDA (diagramas)
 
@@ -47,6 +48,8 @@ export default function TerminalHero() {
       setPhase("done");
     }
   );
+
+  const { input, history } = useTerminalInput(step === "done");
 
   return (
     <div>
@@ -76,7 +79,15 @@ export default function TerminalHero() {
   </a>
 )}
 {"\n\n> "}
+
+{history.map((cmd, i) => (
+  <div key={i}>{`> ${cmd}`}</div>
+))}
+
+{`${input}`}
 {step === "done" && <Cursor />}
+
+
         </pre>
       )}
     </div>
