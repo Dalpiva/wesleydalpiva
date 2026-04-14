@@ -6,11 +6,14 @@ import { useTypewriter } from "../hooks/useTypewriter"
 import Cursor from "./Cursor"
 import { useTerminalInput } from "../hooks/useTerminalInput"
 
-const BEFORE_LINK = ` __      __      _            ___       _      _          
- \\ \\    / /__ __| |___ _  _  |   \\ __ _| |_ __(_)_ ____ _ 
-  \\ \\/\\/ / -_|_-< / -_) || | | |) / _\` | | '_ \\ \\ V / _\` |
-   \\_/\\_/\\___/__/_\\___|\\_, | |___/\\__,_|_| .__/_|\\_/\\__,_|
-                       |__/              |_|              
+const BEFORE_LINK = ` __      __      _            
+ \\ \\    / /__ __| |___ _  _   
+  \\ \\/\\/ / -_|_-< / -_) || |  
+  _\\_/\\_/\\___/__/_\\___|\\_, |  
+ |   \\ __ _| |_ __(_)_ |__/ _ 
+ | |) / _\` | | '_ \\ \\ V / _\` |
+ |___/\\__,_|_| .__/_|\\_/\\__,_|
+             |_|              
 
 > summary
 Olá, me chamo Wesley Dalpiva. Sou apaixonado por aprender e resolver problemas.
