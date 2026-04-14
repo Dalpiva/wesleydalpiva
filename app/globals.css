@@ -17,4 +17,17 @@ pre {
   font-family: inherit;
   font-size: 14px;
   line-height: 1.6;
+
+  white-space: pre-wrap;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
