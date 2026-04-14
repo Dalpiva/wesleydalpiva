@@ -1,13 +1,13 @@
-"use client";
+"use client"
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"
 
 type Props = {
-  blink?: boolean;
-  interval?: number;
-  maxBlinks?: number;
-  onFinish?: () => void;
-};
+  blink?: boolean
+  interval?: number
+  maxBlinks?: number
+  onFinish?: () => void
+}
 
 export default function Cursor({
   blink = true,
@@ -15,27 +15,27 @@ export default function Cursor({
   maxBlinks,
   onFinish,
 }: Props) {
-  const [visible, setVisible] = useState(true);
-  const [count, setCount] = useState(0);
+  const [visible, setVisible] = useState(true)
+  const [count, setCount] = useState(0)
 
   useEffect(() => {
-    if (!blink) return;
+    if (!blink) return
 
     const timer = setInterval(() => {
-      setVisible((v) => !v);
-      setCount((c) => c + 1);
-    }, interval);
+      setVisible((v) => !v)
+      setCount((c) => c + 1)
+    }, interval)
 
-    return () => clearInterval(timer);
-  }, [blink]);
+    return () => clearInterval(timer)
+  }, [blink])
 
   useEffect(() => {
-    if (!maxBlinks) return;
+    if (!maxBlinks) return
 
     if (count >= maxBlinks * 2) {
-      onFinish?.();
+      onFinish?.()
     }
-  }, [count, maxBlinks, onFinish]);
+  }, [count, maxBlinks, onFinish])
 
-  return <span>{visible ? "_" : " "}</span>;
+  return <span>{visible ? "_" : " "}</span>
 }

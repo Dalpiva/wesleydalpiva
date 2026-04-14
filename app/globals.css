@@ -11,6 +11,19 @@ main {
   max-width: 800px;
   margin: 0 auto;
   padding: 40px;
+  height: 100vh;
+  overflow-y: auto;
+
+  /* Firefox */
+  scrollbar-width: none;
+
+  /* IE / Edge antigo */
+  -ms-overflow-style: none;
+}
+
+/* Chrome, Safari */
+main::-webkit-scrollbar {
+  display: none;
 }
 
 pre {

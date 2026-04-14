@@ -1,4 +1,4 @@
-import TerminalHero from "./components/TerminalHero";
+import TerminalHero from "./components/TerminalHero"
 
 export default function Home() {
   return (
@@ -7,5 +7,5 @@ export default function Home() {
         <TerminalHero />
       </section>
     </main>
-  );
+  )
 }
