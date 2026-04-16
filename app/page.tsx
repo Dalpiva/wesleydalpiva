@@ -12,6 +12,12 @@ export default function Home() {
       <section>
         <TerminalHero />
       </section>
+      <noscript>
+        <p>
+          Wesley Dalpiva - Desenvolvedor FullStack.
+          Acesse com JavaScript habilitado para experiência completa.
+        </p>
+      </noscript>
     </main>
   )
 }
