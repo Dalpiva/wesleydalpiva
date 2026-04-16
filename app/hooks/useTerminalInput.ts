@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
-import { executeCommand } from '../lib/executeCommand'
+import { executeCommand, OutputItem } from "../lib/executeCommand";
 
-type HistoryItem = {
-  type: "input" | "output";
-  value: string;
-};
+type HistoryItem =
+  | { type: "input"; value: string }
+  | OutputItem;
 
 export function useTerminalInput(enabled: boolean) {
   const [input, setInput] = useState("");
@@ -14,10 +13,21 @@ export function useTerminalInput(enabled: boolean) {
     if (!enabled) return;
 
     const handleKeyDown = (e: KeyboardEvent) => {
+      // evitar conflito com input mobile
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+
       if (e.key === "Backspace") {
+        e.preventDefault();
         setInput((prev) => prev.slice(0, -1));
-      } else if (e.key === "Enter") {
-        const result = executeCommand(input);
+      } 
+      
+      else if (e.key === "Enter") {
+        e.preventDefault();
+
+        const trimmed = input.trim();
+        if (!trimmed) return;
+
+        const result = executeCommand(trimmed);
 
         if (result.clear) {
           setHistory([]);
@@ -27,15 +37,24 @@ export function useTerminalInput(enabled: boolean) {
 
         setHistory((prev) => [
           ...prev,
-          { type: "input" as const, value: `> ${input}` },
-          ...result.output.map((line) => ({
-            type: "output" as const,
-            value: line,
-          })),
+          { type: "input", value: `> ${trimmed}` },
+          ...result.output.map<HistoryItem>((item) => {
+            if (item.type === "text") {
+              return { type: "text", value: item.value };
+            }
+
+            return {
+              type: "link",
+              label: item.label,
+              href: item.href,
+            };
+          }),
         ]);
 
         setInput("");
-      } else if (e.key.length === 1) {
+      } 
+      
+      else if (e.key.length === 1) {
         setInput((prev) => prev + e.key);
       }
     };
@@ -44,5 +63,5 @@ export function useTerminalInput(enabled: boolean) {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [enabled, input]);
 
-  return { input, history };
+  return { input, setInput, history };
 }

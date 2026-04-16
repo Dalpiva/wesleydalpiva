@@ -47,3 +47,13 @@ pre div {
     opacity: 0;
   }
 }
+
+a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+a:hover {
+  background: #fff;
+  color: #000;
+}

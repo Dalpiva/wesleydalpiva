@@ -1,6 +1,15 @@
 import { commands } from "./commands";
 
-export function executeCommand(input: string) {
+export type OutputItem =
+  | { type: "text"; value: string }
+  | { type: "link"; label: string; href: string };
+
+export type CommandResult = {
+  output: OutputItem[];
+  clear?: boolean;
+};
+
+export function executeCommand(input: string): CommandResult {
   const [cmd, ...args] = input.trim().split(" ");
 
   if (cmd === "clear") {
@@ -11,7 +20,12 @@ export function executeCommand(input: string) {
 
   if (!command) {
     return {
-      output: [`command '${cmd}' not found, you can use 'help'`],
+      output: [
+        {
+          type: "text",
+          value: `command '${cmd}' not found, use 'help'`,
+        },
+      ],
     };
   }
 

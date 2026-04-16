@@ -15,20 +15,7 @@ const BEFORE_LINK = ` __      __      _
  |___/\\__,_|_| .__/_|\\_/\\__,_|
              |_|              
 
-> summary
-Olá, me chamo Wesley Dalpiva. Sou apaixonado por aprender e resolver problemas.
-
-> main Stack:
-- Python
-- Flutter (Dart)
-- Next.js
-
-## low level:
-- C/C++
-- EasyEDA (diagramas)
-
-> work:
-Desenvolvedor FullStack na `
+> enter a command:`
 
 export default function TerminalHero() {
   const { phase, setPhase } = useTerminalSequence()
@@ -77,23 +64,29 @@ export default function TerminalHero() {
       {(phase === "typing" || phase === "done") && (
         <pre>
           {mainText}
-          {step !== "main" && (
-            <a
-              href="https://quatroin.com.br"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {linkText}
-            </a>
-          )}
-          {"\n\n> "}
 
           {/* HISTÓRICO */}
-          {history.map((item, i) => (
-            <div key={i}>
-              {item.value}
-            </div>
-          ))}
+          {history.map((item, i) => {
+            if (item.type === "input" || item.type === "text") {
+              return <div key={i}>{item.value}</div>
+            }
+
+            if (item.type === "link") {
+              return (
+                <div key={i}>
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {item.label}
+                  </a>
+                </div>
+              )
+            }
+
+            return null
+          })}
           {step === "done" && (
             <>
               <div>{`> ${input}`}<Cursor /></div>
