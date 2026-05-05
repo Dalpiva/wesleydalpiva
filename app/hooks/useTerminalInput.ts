@@ -44,7 +44,10 @@ type HistoryItem =
     if (!enabled) return;
 
     const handleKeyDown = (e: KeyboardEvent) => {
-      // evitar conflito com input mobile
+      const active = document.activeElement
+
+      if (active instanceof HTMLInputElement) return;
+      
       if (e.metaKey || e.ctrlKey || e.altKey) return;
 
       if (e.key === "Backspace") {
