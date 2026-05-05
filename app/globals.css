@@ -5,14 +5,17 @@ html, body {
   color: #fff;
   margin: 0;
   padding: 0;
+
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 main {
   max-width: 800px;
   margin: 0 auto;
   padding: 40px;
-  height: 100vh;
-  overflow-y: auto;
 
   /* Firefox */
   scrollbar-width: none;
@@ -21,10 +24,25 @@ main {
   -ms-overflow-style: none;
 }
 
+main, section {
+  height: auto;
+  overflow: visible;
+}
+
 /* Chrome, Safari */
 main::-webkit-scrollbar {
   display: none;
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 
 pre {
   font-family: inherit;
