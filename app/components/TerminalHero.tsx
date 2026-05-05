@@ -67,7 +67,14 @@ export default function TerminalHero() {
 
       {/* TYPEWRITER */}
       {(phase === "typing" || phase === "done") && (
-        <pre style={{ margin: 0, whiteSpace: "pre-wrap" }}>
+        <pre
+          style={{
+            margin: 0,
+            whiteSpace: "pre-wrap",
+            overflowWrap: "anywhere",
+            wordBreak: "break-word",
+          }}
+        >
           {mainText}
 
           {history.map((item, i) => {
