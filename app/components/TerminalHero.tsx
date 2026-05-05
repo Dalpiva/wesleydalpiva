@@ -45,7 +45,7 @@ export default function TerminalHero() {
   const hiddenInputRef = useRef<HTMLInputElement | null>(null)
 
   useEffect(() => {
-    endRef.current?.scrollIntoView({ behavior: "auto" })
+    window.scrollTo(0, document.documentElement.scrollHeight)
   }, [history, input, mainText, linkText])
 
   return (
@@ -55,7 +55,7 @@ export default function TerminalHero() {
     >
       {/* LOADING */}
       {phase === "loading" && (
-        <pre>
+        <pre style={{ margin: 0, whiteSpace: "pre-wrap" }}>
           {`> initializing... `}
           <Cursor
             interval={500}
@@ -67,7 +67,7 @@ export default function TerminalHero() {
 
       {/* TYPEWRITER */}
       {(phase === "typing" || phase === "done") && (
-        <pre>
+        <pre style={{ margin: 0, whiteSpace: "pre-wrap" }}>
           {mainText}
 
           {history.map((item, i) => {
