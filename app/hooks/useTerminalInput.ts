@@ -5,9 +5,40 @@ type HistoryItem =
   | { type: "input"; value: string }
   | OutputItem;
 
-export function useTerminalInput(enabled: boolean) {
-  const [input, setInput] = useState("");
-  const [history, setHistory] = useState<HistoryItem[]>([]);
+  export function useTerminalInput(enabled: boolean) {
+    const [input, setInput] = useState("");
+    const [history, setHistory] = useState<HistoryItem[]>([]);
+
+    const runCommand = (raw: string) => {
+    const trimmed = raw.trim()
+    if (!trimmed) return
+
+    const result = executeCommand(trimmed)
+
+    if (result.clear) {
+      setHistory([])
+      setInput("")
+      return
+    }
+
+    setHistory((prev) => [
+      ...prev,
+      { type: "input", value: `> ${trimmed}` },
+      ...result.output.map<HistoryItem>((item) => {
+        if (item.type === "text") {
+          return { type: "text", value: item.value }
+        }
+
+        return {
+          type: "link",
+          label: item.label,
+          href: item.href,
+        }
+      }),
+    ])
+
+    setInput("")
+  }
 
   useEffect(() => {
     if (!enabled) return;
@@ -23,35 +54,7 @@ export function useTerminalInput(enabled: boolean) {
       
       else if (e.key === "Enter") {
         e.preventDefault();
-
-        const trimmed = input.trim();
-        if (!trimmed) return;
-
-        const result = executeCommand(trimmed);
-
-        if (result.clear) {
-          setHistory([]);
-          setInput("");
-          return;
-        }
-
-        setHistory((prev) => [
-          ...prev,
-          { type: "input", value: `> ${trimmed}` },
-          ...result.output.map<HistoryItem>((item) => {
-            if (item.type === "text") {
-              return { type: "text", value: item.value };
-            }
-
-            return {
-              type: "link",
-              label: item.label,
-              href: item.href,
-            };
-          }),
-        ]);
-
-        setInput("");
+        runCommand(input)
       } 
       
       else if (e.key.length === 1) {
@@ -63,5 +66,6 @@ export function useTerminalInput(enabled: boolean) {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [enabled, input]);
 
-  return { input, setInput, history };
+  return { input, setInput, history, runCommand };
 }
+
