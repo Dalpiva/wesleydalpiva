@@ -1,7 +1,7 @@
 export { contact } from "./contact"
 export { earlierWork } from "./earlier-work"
 export { experience } from "./experience"
-export { defaultLocale, localeLabels, supportedLocales, translate, uiCopy } from "./l10n"
+export { defaultLocale, localeLabels, localeNames, supportedLocales, translate, uiCopy } from "./l10n"
 export { sectionNavigation } from "./navigation"
 export { site } from "./site"
 export { stackGroups } from "./stack"

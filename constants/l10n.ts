@@ -9,6 +9,11 @@ export const localeLabels: Record<Locale, string> = {
   "pt-BR": "PT",
 }
 
+export const localeNames: Record<Locale, string> = {
+  en: "English",
+  "pt-BR": "Português",
+}
+
 export const uiCopy = {
   en: {
     skipToContent: "Skip to content",
@@ -16,7 +21,6 @@ export const uiCopy = {
     menu: "Menu",
     close: "Close",
     language: "Language",
-    available: "Available",
     openToOpportunities: "Open to opportunities",
     current: "Current",
     domain: "Domain",
@@ -28,8 +32,6 @@ export const uiCopy = {
     supportingSkills: "Supporting skills",
     sendEmail: "Send an email",
     downloadResume: "Download resume",
-    commandPalette: "Open command palette",
-    commandHint: "Press Ctrl K",
     commandEyebrow: "CTRL K / NAVIGATE",
     commandTitle: "Navigate the profile",
     commandPlaceholder: "Search a section",
@@ -51,7 +53,6 @@ export const uiCopy = {
     menu: "Menu",
     close: "Fechar",
     language: "Idioma",
-    available: "Disponível",
     openToOpportunities: "Aberto a oportunidades",
     current: "Atual",
     domain: "Domínio",
@@ -63,8 +64,6 @@ export const uiCopy = {
     supportingSkills: "Tecnologias de apoio",
     sendEmail: "Enviar um email",
     downloadResume: "Baixar currículo",
-    commandPalette: "Abrir paleta de comandos",
-    commandHint: "Pressione Ctrl K",
     commandEyebrow: "CTRL K / NAVEGAR",
     commandTitle: "Navegar pelo perfil",
     commandPlaceholder: "Buscar uma seção",

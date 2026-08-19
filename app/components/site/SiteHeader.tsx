@@ -1,4 +1,5 @@
-import { localeLabels, sectionNavigation, translate, uiCopy } from "@/constants"
+import { ChevronDown, ChevronUp } from "lucide-react"
+import { localeLabels, localeNames, sectionNavigation, supportedLocales, translate, uiCopy } from "@/constants"
 import { site } from "@/constants/site"
 import type { Locale } from "@/constants/types"
 import CommandPalette from "./CommandPalette"
@@ -21,9 +22,7 @@ function NavigationLinks({ locale }: SiteHeaderProps) {
 
 export default function SiteHeader({ locale }: SiteHeaderProps) {
   const copy = uiCopy[locale]
-  const alternateLocale: Locale = locale === "en" ? "pt-BR" : "en"
   const homeHref = locale === "en" ? "/" : "/pt"
-  const alternateHref = alternateLocale === "en" ? "/" : "/pt"
 
   return (
     <header className="site-header">
@@ -38,13 +37,35 @@ export default function SiteHeader({ locale }: SiteHeaderProps) {
         </nav>
 
         <div className="header-actions">
-          <span className="availability-label">
-            <span className="status-dot" aria-hidden="true" />
-            {copy.available}
-          </span>
-          <a className="language-switch" href={alternateHref} aria-label={`${copy.language}: ${localeLabels[alternateLocale]}`}>
-            {localeLabels[locale]} / {localeLabels[alternateLocale]}
-          </a>
+          <details className="language-dropdown">
+            <summary aria-label={`${copy.language}: ${localeNames[locale]}`}>
+              <span>{localeNames[locale]}</span>
+              <ChevronDown className="language-icon language-icon-down" size={14} strokeWidth={1.75} aria-hidden="true" />
+              <ChevronUp className="language-icon language-icon-up" size={14} strokeWidth={1.75} aria-hidden="true" />
+            </summary>
+            <div className="language-options">
+              {supportedLocales.map((option) => {
+                const isSelected = option === locale
+                const optionClassName = `language-option${isSelected ? " is-selected" : ""}`
+                const optionContent = (
+                  <>
+                    <span>{localeNames[option]}</span>
+                    <span className="language-option-code">{localeLabels[option]}</span>
+                  </>
+                )
+
+                return isSelected ? (
+                  <span className={optionClassName} aria-current="page" key={option}>
+                    {optionContent}
+                  </span>
+                ) : (
+                  <a className={optionClassName} href={option === "en" ? "/" : "/pt"} key={option}>
+                    {optionContent}
+                  </a>
+                )
+              })}
+            </div>
+          </details>
           <CommandPalette locale={locale} />
         </div>
 
@@ -55,7 +76,6 @@ export default function SiteHeader({ locale }: SiteHeaderProps) {
           </summary>
           <nav aria-label={copy.navigation}>
             <NavigationLinks locale={locale} />
-            <a href={alternateHref}>{localeLabels[alternateLocale]}</a>
           </nav>
         </details>
       </div>

@@ -44,17 +44,6 @@ export default function CommandPalette({ locale }: CommandPaletteProps) {
 
   return (
     <>
-      <button
-        className="command-trigger"
-        type="button"
-        aria-label={copy.commandPalette}
-        aria-expanded={open}
-        onClick={() => setOpen(true)}
-      >
-        <span aria-hidden="true">+</span>
-        <kbd>{copy.commandHint}</kbd>
-      </button>
-
       {open ? (
         <div className="palette-backdrop" role="presentation" onClick={() => setOpen(false)}>
           <div
