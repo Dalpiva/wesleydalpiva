@@ -45,6 +45,7 @@ export type System = {
 
 export type StackGroup = {
   readonly id: string
+  readonly marker: string
   readonly label: LocalizedText
   readonly description: LocalizedText
   readonly priority: "primary" | "secondary"

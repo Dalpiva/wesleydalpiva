@@ -22,7 +22,7 @@ export default function StackSection({ locale }: StackSectionProps) {
         {stackGroups.map((group) => (
           <article className={`stack-group stack-group-${group.priority}`} key={group.id}>
             <div className="stack-group-heading">
-              <p className="meta-label">{group.priority === "primary" ? "01" : "02"}</p>
+              <p className="meta-label">{group.marker}</p>
               <h3>{translate(group.label, locale)}</h3>
             </div>
             <div>

@@ -3,6 +3,7 @@ import type { StackGroup } from "./types"
 export const stackGroups = [
   {
     id: "backend-core",
+    marker: "A",
     label: { en: "Backend foundation", "pt-BR": "Fundação backend" },
     description: {
       en: "The technologies closest to my day-to-day engineering work.",
@@ -13,6 +14,7 @@ export const stackGroups = [
   },
   {
     id: "backend-technologies",
+    marker: "B",
     label: { en: "Backend technologies", "pt-BR": "Tecnologias backend" },
     description: {
       en: "Frameworks, data stores and architectural patterns used in production systems.",
@@ -23,6 +25,7 @@ export const stackGroups = [
   },
   {
     id: "cloud-delivery",
+    marker: "C",
     label: { en: "Cloud / delivery", "pt-BR": "Cloud / entrega" },
     description: {
       en: "Infrastructure and delivery practices that take software into production.",
@@ -33,6 +36,7 @@ export const stackGroups = [
   },
   {
     id: "supporting",
+    marker: "D",
     label: { en: "Supporting technologies", "pt-BR": "Tecnologias de apoio" },
     description: {
       en: "Additional tools from product, mobile, frontend and embedded work.",
