@@ -1,48 +1,40 @@
-# Terminal Portfolio
+# Wesley Dalpiva - Personal Website
 
-Portfólio interativo que simula um terminal, permitindo navegação via comandos.
+Personal website for Wesley Dalpiva, a Backend Software Engineer focused on Python, APIs, databases, cloud infrastructure and production systems.
 
-## Preview
+## Routes
 
-![preview](./public/preview.gif)
+- `/` - English, default language
+- `/pt` - Portuguese
 
-## Demo
+The language versions are rendered on the server and share the same content model.
 
-https://wesleydalpiva.com
+## Content maintenance
 
-## Sobre
+Public content lives in `constants/`:
 
-Este projeto simula um terminal no navegador como interface de navegação.
-O usuário interage digitando comandos, sem UI tradicional.
+- `site.ts` - identity, hero copy, profile facts and section introductions
+- `experience.ts` - roles, dates, responsibilities and technologies
+- `systems.ts` - selected systems, verified metrics and scope of contribution
+- `stack.ts` - technical stack grouped by priority
+- `earlier-work.ts` - biomedical and embedded systems experience
+- `contact.ts` - public links and resume filename
+- `l10n.ts` - interface labels and translations
 
-Foco em:
-- UX minimalista
-- Performance
-- Compatibilidade mobile (teclado, scroll, etc.)
+Dates are stored as ISO values. Current roles use `endDate: null`, and durations are formatted during rendering so time-sensitive copy does not need to be duplicated in components.
 
-## Comandos
+## Commands
 
-- `help` → lista comandos
-- `about` → sobre mim
-- `education` → nível de escolaridade
-- `clear` → limpa o terminal
+```bash
+npm run dev
+npm run lint
+npm run typecheck
+npm run build
+```
 
-Outros comandos estão disponíveis diretamente na interface.
+`Ctrl + K` opens the optional command palette. The conventional navigation remains the primary way to access the site.
 
-## Tecnologias
+## Public assets
 
-- Next.js
-- React
-- TypeScript
-
-## Destaques
-
-- Interface baseada em comandos sem elementos tradicionais de navegação
-- Suporte a input mobile com teclado virtual
-- Sistema de histórico de comandos
-- Efeito typewriter controlado por estado
-- Scroll automático sincronizado com a viewport
-
-## Autor
-
-Wesley Dalpiva  
+- `public/perfil.png` - profile image used in the hero
+- `public/cv_wesley_dalpiva.pdf` - downloadable resume
