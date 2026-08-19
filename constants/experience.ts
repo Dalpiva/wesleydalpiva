@@ -57,4 +57,40 @@ export const experience = [
       },
     ],
   },
+  {
+    id: "unoesc",
+    organization: {
+      en: "University of Western Santa Catarina (UNOESC)",
+      "pt-BR": "Universidade do Oeste de Santa Catarina (UNOESC)",
+    },
+    location: {
+      en: "Joaçaba, Santa Catarina, Brazil",
+      "pt-BR": "Joaçaba, Santa Catarina, Brasil",
+    },
+    roles: [
+      {
+        title: {
+          en: "Software Engineer Intern",
+          "pt-BR": "Estagiário de Engenharia de Software",
+        },
+        startDate: "2022-08-01",
+        endDate: "2023-12-31",
+        summary: {
+          en: "Software engineering internship supporting biomedical rehabilitation research through real-time data acquisition and embedded hardware integration.",
+          "pt-BR": "Estágio de engenharia de software apoiando pesquisas de reabilitação biomédica por meio de aquisição de dados em tempo real e integração com hardware embarcado.",
+        },
+        highlights: [
+          {
+            en: "Built Python software for real-time acquisition, visualization and storage of EMG and encoder signals.",
+            "pt-BR": "Desenvolvi software em Python para aquisição, visualização e armazenamento em tempo real de sinais EMG e de encoder.",
+          },
+          {
+            en: "Integrated embedded hardware with MySQL databases through serial communication for laboratory experiments.",
+            "pt-BR": "Integrei hardware embarcado a bancos MySQL por comunicação serial para experimentos de laboratório.",
+          },
+        ],
+        stack: ["Python", "MySQL", "C/C++", "Git/GitHub"],
+      },
+    ],
+  },
 ] as const satisfies readonly ExperienceEntry[]
