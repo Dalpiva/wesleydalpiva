@@ -37,8 +37,8 @@ export default function PortfolioPage({ locale }: PortfolioPageProps) {
       <SiteHeader locale={locale} />
       <main id="main-content">
         <HeroSection locale={locale} />
-        <ExperienceSection locale={locale} />
         <SystemsSection locale={locale} />
+        <ExperienceSection locale={locale} />
         <StackSection locale={locale} />
         <EarlierWorkSection locale={locale} />
         <ContactSection locale={locale} />

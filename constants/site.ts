@@ -49,12 +49,12 @@ export const site = {
     },
     systems: {
       title: {
-        en: "Systems by function, not by client name.",
-        "pt-BR": "Sistemas pela função, não pelo nome do cliente.",
+        en: "Systems by domain and impact.",
+        "pt-BR": "Sistemas por domínio e impacto.",
       } satisfies LocalizedText,
       intro: {
-        en: "Selected production work presented through domain, scale and technical responsibility without exposing confidential product names.",
-        "pt-BR": "Trabalhos selecionados em produção apresentados por domínio, escala e responsabilidade técnica, sem expor nomes confidenciais.",
+        en: "Selected production projects presented through the problem, domain and technical responsibility while preserving confidential information.",
+        "pt-BR": "Projetos selecionados em produção, apresentados pelo problema, domínio e responsabilidade técnica, preservando informações confidenciais.",
       } satisfies LocalizedText,
     },
     stack: {

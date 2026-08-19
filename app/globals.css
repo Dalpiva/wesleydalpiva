@@ -767,10 +767,6 @@ main {
   color: var(--background);
 }
 
-.system-link {
-  margin-top: 1.5rem;
-}
-
 .stack-group {
   display: grid;
   grid-template-columns: minmax(180px, 0.35fr) minmax(0, 1fr);

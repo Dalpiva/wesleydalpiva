@@ -62,9 +62,6 @@ export default function SystemsSection({ locale }: SystemsSectionProps) {
                 </ul>
               </div>
 
-              <a className="text-link system-link" href="#contact">
-                <span aria-hidden="true">-&gt;</span> {copy.viewDetails}
-              </a>
             </div>
           </article>
         ))}

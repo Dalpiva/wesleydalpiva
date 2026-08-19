@@ -7,14 +7,14 @@ export const sectionNavigation = [
     label: { en: "Profile", "pt-BR": "Perfil" } satisfies LocalizedText,
   },
   {
-    id: "experience",
+    id: "systems",
     number: "02",
-    label: { en: "Experience", "pt-BR": "Experiência" } satisfies LocalizedText,
+    label: { en: "Systems", "pt-BR": "Sistemas" } satisfies LocalizedText,
   },
   {
-    id: "systems",
+    id: "experience",
     number: "03",
-    label: { en: "Systems", "pt-BR": "Sistemas" } satisfies LocalizedText,
+    label: { en: "Experience", "pt-BR": "Experiência" } satisfies LocalizedText,
   },
   {
     id: "stack",
