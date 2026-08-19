@@ -27,23 +27,6 @@ export default function HeroSection({ locale }: HeroSectionProps) {
             ))}
           </ul>
 
-          <div className="hero-facts" aria-label={copy.profileFacts}>
-            {site.hero.facts.map((fact) => (
-              <div className="hero-fact" key={translate(fact.label, locale)}>
-                <span>{translate(fact.label, locale)}</span>
-                <strong>
-                  {translate(fact.label, locale) === "STATUS" ? (
-                    <span className="fact-status">
-                      <span className="status-dot" aria-hidden="true" />
-                      {translate(fact.value, locale)}
-                    </span>
-                  ) : (
-                    translate(fact.value, locale)
-                  )}
-                </strong>
-              </div>
-            ))}
-          </div>
         </div>
 
         <figure className="hero-portrait">

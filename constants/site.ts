@@ -29,20 +29,6 @@ export const site = {
       "pt-BR": "Construo e assumo a responsabilidade por sistemas backend, da arquitetura à produção. {years} anos trabalhando com saúde, esportes, cidades inteligentes e software corporativo.",
     } satisfies LocalizedText,
     keywords: ["PYTHON", "APIs", "DATABASES", "CLOUD"],
-    facts: [
-      {
-        label: { en: "STATUS", "pt-BR": "STATUS" } satisfies LocalizedText,
-        value: { en: "AVAILABLE", "pt-BR": "DISPONÍVEL" } satisfies LocalizedText,
-      },
-      {
-        label: { en: "FOCUS", "pt-BR": "FOCO" } satisfies LocalizedText,
-        value: { en: "BACKEND SYSTEMS", "pt-BR": "SISTEMAS BACKEND" } satisfies LocalizedText,
-      },
-      {
-        label: { en: "LOCATION", "pt-BR": "LOCALIZAÇÃO" } satisfies LocalizedText,
-        value: { en: "BRAZIL", "pt-BR": "BRASIL" } satisfies LocalizedText,
-      },
-    ],
   },
   progression: [
     { en: "Embedded", "pt-BR": "Embarcados" } satisfies LocalizedText,

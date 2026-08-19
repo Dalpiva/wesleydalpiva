@@ -104,7 +104,6 @@ kbd,
 .meta-label,
 .system-domain,
 .tech-line,
-.hero-fact,
 .availability-label,
 .language-switch,
 .desktop-navigation,
@@ -357,11 +356,12 @@ main {
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.72fr);
-  align-items: center;
+  align-items: start;
   gap: clamp(2rem, 6vw, 7.5rem);
   min-height: calc(100svh - var(--header-height));
-  padding-top: clamp(3.5rem, 8vw, 7rem);
-  padding-bottom: clamp(3.5rem, 8vw, 7rem);
+  min-height: calc(100dvh - var(--header-height));
+  padding-top: clamp(1.75rem, 3vw, 3.5rem);
+  padding-bottom: clamp(3rem, 6vw, 5.5rem);
 }
 
 .hero-main::after {
@@ -395,7 +395,7 @@ main {
   max-width: 850px;
   margin-top: 1.5rem;
   color: var(--text);
-  font-size: clamp(3.4rem, 7.5vw, 8.6rem);
+  font-size: clamp(3.1rem, 6.5vw, 7.2rem);
   font-weight: 500;
   letter-spacing: -0.075em;
   line-height: 0.91;
@@ -427,34 +427,6 @@ main {
   content: "+";
 }
 
-.hero-facts {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  max-width: 720px;
-  padding-top: 1rem;
-  margin-top: clamp(2.5rem, 5vw, 4.5rem);
-  border-top: 1px solid var(--line);
-}
-
-.hero-fact {
-  display: grid;
-  gap: 0.35rem;
-  color: var(--muted-dark);
-  font-size: 0.6rem;
-  letter-spacing: 0.09em;
-}
-
-.hero-fact strong {
-  color: var(--text);
-  font-size: 0.67rem;
-  font-weight: 500;
-}
-
-.fact-status {
-  color: var(--accent);
-}
-
 .hero-portrait {
   justify-self: end;
   width: min(100%, 480px);
@@ -464,6 +436,7 @@ main {
   position: relative;
   overflow: hidden;
   border: 1px solid var(--line-strong);
+  border-radius: 1.25rem;
   background: var(--surface);
 }
 
@@ -1225,7 +1198,8 @@ main {
     grid-template-columns: 1fr;
     gap: 3rem;
     min-height: calc(100svh - var(--header-height));
-    padding-top: 3.5rem;
+    min-height: calc(100dvh - var(--header-height));
+    padding-top: 2rem;
     padding-bottom: 4rem;
   }
 
@@ -1237,20 +1211,12 @@ main {
 
   .hero-copy h1 {
     max-width: 640px;
-    font-size: clamp(3.25rem, 15vw, 6.5rem);
+    font-size: clamp(3rem, 12.5vw, 5.7rem);
   }
 
   .hero-summary {
     max-width: 580px;
     font-size: 1rem;
-  }
-
-  .hero-facts {
-    gap: 0.75rem;
-  }
-
-  .hero-fact strong {
-    font-size: 0.6rem;
   }
 
   .hero-portrait {
@@ -1385,15 +1351,6 @@ main {
 
   .language-switch {
     display: none;
-  }
-
-  .hero-facts {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-fact {
-    grid-template-columns: 5rem 1fr;
-    align-items: baseline;
   }
 
   .system-metadata {
