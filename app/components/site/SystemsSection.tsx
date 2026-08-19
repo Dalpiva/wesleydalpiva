@@ -16,11 +16,9 @@ export default function SystemsSection({ locale }: SystemsSectionProps) {
       <SectionHeader
         id="systems"
         locale={locale}
-        intro={translate(site.sections.systems.intro, locale)}
+        title={site.sections.systems.title}
+        intro={site.sections.systems.intro}
       />
-      <h2 id="systems-title" className="section-title">
-        {translate(site.sections.systems.title, locale)}
-      </h2>
 
       <div className="systems-list">
         {systems.map((system) => (

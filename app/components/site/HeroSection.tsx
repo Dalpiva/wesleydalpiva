@@ -26,7 +26,6 @@ export default function HeroSection({ locale }: HeroSectionProps) {
               <li key={keyword}>{keyword}</li>
             ))}
           </ul>
-
         </div>
 
         <figure className="hero-portrait">
@@ -46,13 +45,6 @@ export default function HeroSection({ locale }: HeroSectionProps) {
         </figure>
       </div>
 
-      <div className="profile-about">
-        <p className="section-kicker">ABOUT / APPROACH</p>
-        <div>
-          <h2>{translate(site.about.title, locale)}</h2>
-          <p>{translate(site.about.text, locale)}</p>
-        </div>
-      </div>
     </section>
   )
 }

@@ -17,11 +17,9 @@ export default function EarlierWorkSection({ locale }: EarlierWorkSectionProps) 
       <SectionHeader
         id="earlier-work"
         locale={locale}
-        intro={translate(site.sections.earlierWork.intro, locale)}
+        title={site.sections.earlierWork.title}
+        intro={site.sections.earlierWork.intro}
       />
-      <h2 id="earlier-work-title" className="section-title">
-        {translate(site.sections.earlierWork.title, locale)}
-      </h2>
 
       <div className="progression" aria-label={copy.progression}>
         {site.progression.map((step, index) => (

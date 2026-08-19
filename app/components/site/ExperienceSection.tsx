@@ -17,11 +17,9 @@ export default function ExperienceSection({ locale }: ExperienceSectionProps) {
       <SectionHeader
         id="experience"
         locale={locale}
-        intro={translate(site.sections.experience.intro, locale)}
+        title={site.sections.experience.title}
+        intro={site.sections.experience.intro}
       />
-      <h2 id="experience-title" className="section-title">
-        {translate(site.sections.experience.title, locale)}
-      </h2>
 
       <div className="experience-list">
         {experience.map((entry) => (

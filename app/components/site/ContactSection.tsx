@@ -17,11 +17,9 @@ export default function ContactSection({ locale }: ContactSectionProps) {
       <SectionHeader
         id="contact"
         locale={locale}
-        intro={translate(site.sections.contact.intro, locale)}
+        title={site.sections.contact.title}
+        intro={site.sections.contact.intro}
       />
-      <h2 id="contact-title" className="section-title">
-        {translate(site.sections.contact.title, locale)}
-      </h2>
 
       <div className="contact-layout">
         <a className="email-link" href={`mailto:${contact.email}`}>

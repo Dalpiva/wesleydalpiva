@@ -14,11 +14,9 @@ export default function StackSection({ locale }: StackSectionProps) {
       <SectionHeader
         id="stack"
         locale={locale}
-        intro={translate(site.sections.stack.intro, locale)}
+        title={site.sections.stack.title}
+        intro={site.sections.stack.intro}
       />
-      <h2 id="stack-title" className="section-title">
-        {translate(site.sections.stack.title, locale)}
-      </h2>
 
       <div className="stack-list">
         {stackGroups.map((group) => (

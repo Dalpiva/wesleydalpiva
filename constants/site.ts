@@ -36,16 +36,6 @@ export const site = {
     { en: "Software engineering", "pt-BR": "Engenharia de software" } satisfies LocalizedText,
     { en: "Backend engineering", "pt-BR": "Engenharia backend" } satisfies LocalizedText,
   ],
-  about: {
-    title: {
-      en: "Engineering with ownership at every layer.",
-      "pt-BR": "Engenharia com responsabilidade em todas as camadas.",
-    } satisfies LocalizedText,
-    text: {
-      en: "My background moves from firmware and biomedical research into production backend engineering. Today I work on architectures, APIs, data and cloud deployments that have to keep working after the launch.",
-      "pt-BR": "Minha trajetória vai de firmware e pesquisa biomédica até a engenharia backend em produção. Hoje trabalho com arquiteturas, APIs, dados e deploys em cloud que precisam continuar funcionando depois do lançamento.",
-    } satisfies LocalizedText,
-  },
   sections: {
     experience: {
       title: {

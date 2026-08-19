@@ -486,32 +486,6 @@ main {
   text-transform: uppercase;
 }
 
-.profile-about {
-  display: grid;
-  grid-template-columns: minmax(150px, 0.35fr) minmax(0, 1fr);
-  gap: 2rem;
-  padding-top: clamp(2.5rem, 6vw, 5rem);
-  padding-bottom: clamp(4rem, 8vw, 8rem);
-  border-top: 1px solid var(--line);
-}
-
-.profile-about h2 {
-  max-width: 680px;
-  color: var(--text);
-  font-size: clamp(2rem, 4vw, 4.4rem);
-  font-weight: 450;
-  letter-spacing: -0.06em;
-  line-height: 0.98;
-  text-wrap: balance;
-}
-
-.profile-about p:last-child {
-  max-width: 660px;
-  margin-top: 1.25rem;
-  color: var(--muted);
-  font-size: 1.05rem;
-}
-
 .content-section {
   padding-top: clamp(4rem, 9vw, 9rem);
   padding-bottom: clamp(4rem, 9vw, 9rem);
@@ -519,6 +493,10 @@ main {
 }
 
 .section-header {
+  display: block;
+}
+
+.section-header-meta {
   display: grid;
   grid-template-columns: minmax(150px, 0.35fr) minmax(0, 1fr);
   gap: 2rem;
@@ -541,14 +519,15 @@ main {
 }
 
 .section-title {
-  max-width: 850px;
-  padding-left: calc(35% + 2rem);
+  width: 100%;
+  max-width: none;
   margin-top: clamp(2rem, 4vw, 4rem);
   color: var(--text);
   font-size: clamp(2.5rem, 5.5vw, 6.3rem);
   font-weight: 450;
   letter-spacing: -0.075em;
   line-height: 0.94;
+  text-align: center;
   text-wrap: balance;
 }
 
@@ -1160,9 +1139,6 @@ main {
     gap: 3rem;
   }
 
-  .section-title {
-    padding-left: calc(35% + 2rem);
-  }
 }
 
 @media (max-width: 760px) {
@@ -1224,8 +1200,7 @@ main {
     width: min(82vw, 390px);
   }
 
-  .profile-about,
-  .section-header,
+  .section-header-meta,
   .role-item,
   .earlier-work-entry,
   .stack-group {
@@ -1233,13 +1208,7 @@ main {
     gap: 1.25rem;
   }
 
-  .profile-about h2 {
-    max-width: 580px;
-    font-size: clamp(2.2rem, 9vw, 4rem);
-  }
-
   .section-title {
-    padding-left: 0;
     margin-top: 1.75rem;
     font-size: clamp(2.6rem, 12vw, 5.5rem);
   }
