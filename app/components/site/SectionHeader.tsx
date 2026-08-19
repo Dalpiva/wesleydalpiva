@@ -15,6 +15,9 @@ export default function SectionHeader({ id, locale, title, intro }: SectionHeade
 
   return (
     <header className="section-header">
+      <h2 id={`${id}-title`} className="section-title">
+        {translate(title, locale)}
+      </h2>
       <div className="section-header-meta">
         <p className="section-kicker">
           <span>{section.number}</span>
@@ -23,9 +26,6 @@ export default function SectionHeader({ id, locale, title, intro }: SectionHeade
         </p>
         {intro ? <p className="section-intro">{translate(intro, locale)}</p> : null}
       </div>
-      <h2 id={`${id}-title`} className="section-title">
-        {translate(title, locale)}
-      </h2>
     </header>
   )
 }

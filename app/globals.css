@@ -500,6 +500,7 @@ main {
   display: grid;
   grid-template-columns: minmax(150px, 0.35fr) minmax(0, 1fr);
   gap: 1.5rem;
+  margin-top: clamp(1rem, 2vw, 2rem);
 }
 
 .section-kicker {
@@ -521,7 +522,7 @@ main {
 .section-title {
   width: 100%;
   max-width: none;
-  margin-top: clamp(1.25rem, 2.5vw, 2.5rem);
+  margin-top: 0;
   color: var(--text);
   font-size: clamp(2.5rem, 5.5vw, 6.3rem);
   font-weight: 450;
