@@ -109,8 +109,7 @@ kbd,
 .command-search,
 .command-results,
 .site-footer,
-.role-meta,
-.earlier-work-meta {
+.role-meta {
   font-family: var(--font-mono), monospace;
 }
 
@@ -573,8 +572,7 @@ main {
 
 .experience-list,
 .systems-list,
-.stack-list,
-.earlier-work-list {
+.stack-list {
   margin-top: clamp(2rem, 4vw, 4rem);
 }
 
@@ -593,7 +591,6 @@ main {
 .experience-entry-heading h3,
 .role-content h4,
 .system-content h3,
-.earlier-work-entry h3,
 .stack-group h3 {
   color: var(--text);
   font-weight: 500;
@@ -649,7 +646,6 @@ main {
 
 .role-summary,
 .system-description,
-.earlier-work-entry p,
 .stack-description {
   color: var(--muted);
 }
@@ -842,109 +838,20 @@ main {
 }
 
 .stack-items li {
+  position: relative;
   padding: 0.4rem 0.65rem;
   border: 1px solid var(--line);
   color: var(--text);
   font-family: var(--font-mono), monospace;
   font-size: 0.68rem;
+  transition: color 180ms ease, border-color 180ms ease, transform 180ms cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.stack-group-secondary {
-  opacity: 0.78;
-}
-
-.progression {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin-top: clamp(2rem, 4vw, 4rem);
-  border-top: 1px solid var(--line-strong);
-  border-bottom: 1px solid var(--line-strong);
-}
-
-.progression-step {
-  position: relative;
-  display: grid;
-  gap: 0.7rem;
-  min-height: 100px;
-  padding: 1rem;
-  border-right: 1px solid var(--line);
-}
-
-.progression-step:last-child {
-  border-right: 0;
-}
-
-.progression-step > span:first-child {
-  color: var(--accent);
-  font-family: var(--font-mono), monospace;
-  font-size: 0.65rem;
-}
-
-.progression-step strong {
-  align-self: end;
-  max-width: 130px;
-  color: var(--text);
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.05;
-}
-
-.progression-arrow {
-  position: absolute;
-  top: 50%;
-  right: -0.55rem;
-  z-index: 1;
-  padding: 0 0.25rem;
-  transform: translateY(-50%);
-  background: var(--background);
-  color: var(--accent);
-  font-family: var(--font-mono), monospace;
-  font-size: 0.8rem;
-}
-
-.earlier-work-entry {
-  display: grid;
-  grid-template-columns: minmax(170px, 0.35fr) minmax(0, 1fr);
-  gap: 1.5rem;
-  padding: 1.5rem 0;
-  border-top: 1px solid var(--line);
-}
-
-.earlier-work-meta {
-  display: grid;
-  align-content: start;
-  gap: 0.6rem;
-  color: var(--muted-dark);
-  font-size: 0.67rem;
-  line-height: 1.5;
-}
-
-.earlier-work-meta .meta-label {
-  margin-top: 0.8rem;
-  margin-bottom: -0.35rem;
-}
-
-.earlier-work-entry h3 {
-  font-size: clamp(1.5rem, 2.4vw, 2.5rem);
-  line-height: 1.05;
-}
-
-.earlier-work-entry p {
-  max-width: 720px;
-  margin-top: 0.75rem;
-}
-
-.compact-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.5rem;
-  margin-top: 1rem;
-  font-family: var(--font-mono), monospace;
-  font-size: 0.68rem;
-}
-
-.compact-list li {
-  padding-left: 0.9rem;
+.stack-items li:hover {
+  border-color: var(--accent);
+  color: var(--background-deep);
+  background: var(--accent);
+  transform: scale(1.06);
 }
 
 .contact-section {
@@ -964,7 +871,7 @@ main {
 
 .email-link {
   color: var(--text);
-  font-size: clamp(1.8rem, 5vw, 5.8rem);
+  font-size: clamp(1.25rem, 3.2vw, 3.4rem);
   font-weight: 450;
   letter-spacing: -0.07em;
   line-height: 0.95;
@@ -972,7 +879,7 @@ main {
   text-decoration-color: var(--accent);
   text-decoration-thickness: 0.08em;
   text-underline-offset: 0.12em;
-  overflow-wrap: anywhere;
+  white-space: nowrap;
 }
 
 .email-link:hover {
@@ -989,7 +896,7 @@ main {
 
 .contact-links {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   border-bottom: 1px solid var(--line);
 }
 
@@ -1230,7 +1137,6 @@ main {
 
   .section-header-meta,
   .role-item,
-  .earlier-work-entry,
   .stack-group {
     grid-template-columns: 1fr;
     gap: 1.25rem;
@@ -1243,8 +1149,7 @@ main {
 
   .experience-list,
   .systems-list,
-  .stack-list,
-  .earlier-work-list {
+  .stack-list {
     margin-top: 2.5rem;
   }
 
@@ -1284,28 +1189,6 @@ main {
     gap: 0.75rem;
   }
 
-  .progression {
-    grid-template-columns: 1fr;
-  }
-
-  .progression-step {
-    min-height: 92px;
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .progression-step:last-child {
-    border-bottom: 0;
-  }
-
-  .progression-arrow {
-    top: auto;
-    right: auto;
-    bottom: -0.55rem;
-    left: 1.2rem;
-    transform: none;
-  }
-
   .contact-layout {
     display: grid;
     align-items: start;
@@ -1331,7 +1214,7 @@ main {
     border-right: 0;
   }
 
-  .contact-links a:nth-last-child(-n + 2) {
+  .contact-links a:last-child {
     border-bottom: 0;
   }
 

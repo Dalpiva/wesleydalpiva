@@ -22,13 +22,8 @@ export const sectionNavigation = [
     label: { en: "Stack", "pt-BR": "Stack" } satisfies LocalizedText,
   },
   {
-    id: "earlier-work",
-    number: "05",
-    label: { en: "Earlier work", "pt-BR": "Trabalho anterior" } satisfies LocalizedText,
-  },
-  {
     id: "contact",
-    number: "06",
+    number: "05",
     label: { en: "Contact", "pt-BR": "Contato" } satisfies LocalizedText,
   },
 ] as const

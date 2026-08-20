@@ -30,12 +30,6 @@ export const site = {
     } satisfies LocalizedText,
     keywords: ["PYTHON", "APIs", "DATABASES", "CLOUD"],
   },
-  progression: [
-    { en: "Embedded", "pt-BR": "Embarcados" } satisfies LocalizedText,
-    { en: "Biomedical systems", "pt-BR": "Sistemas biomédicos" } satisfies LocalizedText,
-    { en: "Software engineering", "pt-BR": "Engenharia de software" } satisfies LocalizedText,
-    { en: "Backend engineering", "pt-BR": "Engenharia backend" } satisfies LocalizedText,
-  ],
   sections: {
     experience: {
       title: {
@@ -65,16 +59,6 @@ export const site = {
       intro: {
         en: "Backend engineering is the center of gravity. The rest supports the systems around it.",
         "pt-BR": "Engenharia backend é o centro de gravidade. O restante dá suporte aos sistemas ao redor.",
-      } satisfies LocalizedText,
-    },
-    earlierWork: {
-      title: {
-        en: "The path into backend engineering.",
-        "pt-BR": "O caminho até a engenharia backend.",
-      } satisfies LocalizedText,
-      intro: {
-        en: "Embedded and biomedical work still shapes how I think about reliability, data and systems at the edge.",
-        "pt-BR": "O trabalho embarcado e biomédico ainda influencia como penso sobre confiabilidade, dados e sistemas na borda.",
       } satisfies LocalizedText,
     },
     contact: {

@@ -1,5 +1,4 @@
 export { contact } from "./contact"
-export { earlierWork } from "./earlier-work"
 export { experience } from "./experience"
 export { defaultLocale, localeLabels, localeNames, supportedLocales, translate, uiCopy } from "./l10n"
 export { sectionNavigation } from "./navigation"
@@ -10,7 +9,6 @@ export type {
   DateRange,
   ExperienceEntry,
   ExperienceRole,
-  EarlierWork,
   Locale,
   Localized,
   LocalizedText,

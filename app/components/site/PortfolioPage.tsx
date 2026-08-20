@@ -4,7 +4,6 @@ import { site } from "@/constants/site"
 import type { Locale } from "@/constants/types"
 import { formatYears, fullYearsSince, interpolate } from "@/app/lib/formatters"
 import ContactSection from "./ContactSection"
-import EarlierWorkSection from "./EarlierWorkSection"
 import ExperienceSection from "./ExperienceSection"
 import HeroSection from "./HeroSection"
 import SiteHeader from "./SiteHeader"
@@ -40,7 +39,6 @@ export default function PortfolioPage({ locale }: PortfolioPageProps) {
         <SystemsSection locale={locale} />
         <ExperienceSection locale={locale} />
         <StackSection locale={locale} />
-        <EarlierWorkSection locale={locale} />
         <ContactSection locale={locale} />
       </main>
       <script

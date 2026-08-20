@@ -51,11 +51,3 @@ export type StackGroup = {
   readonly priority: "primary" | "secondary"
   readonly items: readonly string[]
 }
-
-export type EarlierWork = DateRange & {
-  readonly id: string
-  readonly title: LocalizedText
-  readonly description: LocalizedText
-  readonly highlights: readonly LocalizedText[]
-  readonly stack: readonly string[]
-}

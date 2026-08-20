@@ -4,35 +4,35 @@ export const stackGroups = [
   {
     id: "backend-core",
     marker: "A",
-    label: { en: "Backend foundation", "pt-BR": "Fundação backend" },
+    label: { en: "Backend", "pt-BR": "Backend" },
     description: {
       en: "The technologies closest to my day-to-day engineering work.",
       "pt-BR": "As tecnologias mais próximas do meu trabalho diário de engenharia.",
     },
     priority: "primary",
-    items: ["Python", "REST APIs", "Databases", "Docker", "Cloud", "Git/GitHub"],
+    items: ["Python", "REST APIs", "SQL", "Architecture", "Microservices"],
   },
   {
     id: "backend-technologies",
     marker: "B",
-    label: { en: "Backend technologies", "pt-BR": "Tecnologias backend" },
+    label: { en: "Backend Engineering", "pt-BR": "Engenharia backend" },
     description: {
       en: "Frameworks, data stores and architectural patterns used in production systems.",
       "pt-BR": "Frameworks, tecnologias de dados e padrões arquiteturais usados em sistemas de produção.",
     },
     priority: "primary",
-    items: ["Python", "Flask", "SQL", "MySQL", "Firebase", "Microservices"],
+    items: ["Flask", "FastAPI", "SQLAlchemy", "MySQL", "Firebase", "API Design"],
   },
   {
     id: "cloud-delivery",
     marker: "C",
-    label: { en: "Cloud / delivery", "pt-BR": "Cloud / entrega" },
+    label: { en: "Cloud & DevOps", "pt-BR": "Cloud & DevOps" },
     description: {
       en: "Infrastructure and delivery practices that take software into production.",
       "pt-BR": "Infraestrutura e práticas de entrega que levam software para a produção.",
     },
     priority: "primary",
-    items: ["Google Cloud Platform", "Docker", "CI/CD", "Git/GitHub"],
+    items: ["GCP", "Docker", "CI/CD", "Git/GitHub"],
   },
   {
     id: "supporting",
