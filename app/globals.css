@@ -30,6 +30,7 @@ body {
   min-height: 100vh;
   margin: 0;
   overflow-x: hidden;
+  overflow-wrap: anywhere;
   background: var(--background);
   color: var(--text);
   font-family: var(--font-sans), sans-serif;
@@ -912,7 +913,6 @@ main {
   text-decoration-color: var(--accent);
   text-decoration-thickness: 0.08em;
   text-underline-offset: 0.12em;
-  white-space: nowrap;
 }
 
 .email-link:hover {
@@ -1139,7 +1139,7 @@ main {
   }
 
   .hero-main {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 2rem;
     min-height: calc(100svh - var(--header-height));
     min-height: calc(100dvh - var(--header-height));
@@ -1172,7 +1172,7 @@ main {
   .role-item,
   .stack-group,
   .activity-entry {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 1.25rem;
   }
 
@@ -1211,7 +1211,7 @@ main {
   }
 
   .system-metadata {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.25rem 1rem;
   }
 
@@ -1230,22 +1230,18 @@ main {
   }
 
   .email-link {
-    font-size: clamp(2rem, 9vw, 4.5rem);
+    font-size: clamp(1.1rem, 8vw, 4.5rem);
   }
 
   .contact-links {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .contact-links a,
   .contact-links a:not(:first-child) {
-    padding: 1rem 0.6rem 1rem 0;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .contact-links a:nth-child(even) {
-    padding-left: 0.6rem;
+    padding: 1rem 0;
     border-right: 0;
+    border-bottom: 1px solid var(--line);
   }
 
   .contact-links a:last-child {
@@ -1264,7 +1260,7 @@ main {
   }
 
   .system-metadata {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .system-scale {
