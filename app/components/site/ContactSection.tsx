@@ -10,7 +10,6 @@ type ContactSectionProps = {
 
 export default function ContactSection({ locale }: ContactSectionProps) {
   const copy = uiCopy[locale]
-  const currentYear = new Date().getFullYear()
 
   return (
     <section id="contact" className="content-section contact-section" aria-labelledby="contact-title">
@@ -47,7 +46,6 @@ export default function ContactSection({ locale }: ContactSectionProps) {
       <footer className="site-footer">
         <span>{site.name.toUpperCase()}</span>
         <span>{copy.footerNote}</span>
-        <span>{currentYear} / {copy.rights}</span>
       </footer>
     </section>
   )
