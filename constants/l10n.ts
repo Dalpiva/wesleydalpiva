@@ -6,7 +6,7 @@ export const supportedLocales = ["en", "pt-BR"] as const
 
 export const localeLabels: Record<Locale, string> = {
   en: "EN",
-  "pt-BR": "PT",
+  "pt-BR": "BR",
 }
 
 export const localeNames: Record<Locale, string> = {
