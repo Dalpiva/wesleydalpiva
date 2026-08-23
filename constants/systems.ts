@@ -9,90 +9,168 @@ export const systems = [
       "pt-BR": "Plataforma de Gestão de Treinos",
     },
     domain: {
-      en: "SPORTS / TRAINING",
-      "pt-BR": "ESPORTES / TREINAMENTO",
+      en: "SPORTS / AUTOMATION",
+      "pt-BR": "ESPORTES / AUTOMAÇÃO",
     },
     description: {
-      en: "Backend platform supporting coaches and athletes through training planning, progress tracking and automated communication.",
-      "pt-BR": "Plataforma backend que apoia treinadores e atletas com planejamento de treinos, acompanhamento de evolução e comunicação automatizada.",
+      en: "Full-stack coaching platform that turns weekly prescriptions into scheduled messages, athlete uploads and structured training data.",
+      "pt-BR":
+        "Plataforma full-stack de treinamento que transforma prescrições semanais em mensagens agendadas, uploads dos atletas e dados estruturados de treino.",
     },
     scale: [
       { value: "2", label: { en: "coaches", "pt-BR": "treinadores" } },
-      { value: "70", label: { en: "athletes", "pt-BR": "atletas" } },
-      { value: "70+", label: { en: "weekly training plans", "pt-BR": "planos semanais" } },
-      { value: "245", label: { en: "training sessions", "pt-BR": "sessões de treino" } },
-      { value: "140", label: { en: "automated weekly messages", "pt-BR": "mensagens semanais automatizadas" } },
-      { value: "~22", label: { en: "daily uploads", "pt-BR": "uploads diários" } },
+      { value: "~70", label: { en: "athletes", "pt-BR": "atletas" } },
+      {
+        value: "49%",
+        label: {
+          en: " growth of active runners in 3 months",
+          "pt-BR": "crescimento de corredores ativos em 3 meses",
+        },
+      },
+      {
+        value: "70+",
+        label: { en: "weekly plans", "pt-BR": "planos semanais" },
+      },
+      {
+        value: "140",
+        label: {
+          en: "automated weekly messages",
+          "pt-BR": "mensagens semanais automatizadas",
+        },
+      },
+      {
+        value: "~22",
+        label: { en: "daily uploads", "pt-BR": "uploads diários" },
+      },
     ],
     role: {
-      en: "Backend Engineer / Sole developer",
-      "pt-BR": "Engenheiro Backend / Desenvolvedor único",
+      en: "Backend Engineer / Full-stack owner",
+      "pt-BR": "Engenheiro Backend / Responsável full-stack",
     },
-    stack: ["Python", "Flask", "Firebase", "GCP"],
+    stack: ["Python", "Flask", "Firestore", "GCP", "Next.js", "TypeScript"],
     responsibilities: [
-      { en: "Backend architecture and REST APIs", "pt-BR": "Arquitetura backend e APIs REST" },
-      { en: "Authentication and automated messaging workflows", "pt-BR": "Autenticação e fluxos de mensagens automatizadas" },
-      { en: "CI/CD and cloud deployment", "pt-BR": "CI/CD e deploy em cloud" },
+      {
+        en: "Backend architecture and REST APIs",
+        "pt-BR": "Arquitetura backend e APIs REST",
+      },
+      {
+        en: "Training scheduling, automated messaging and delivery reporting",
+        "pt-BR":
+          "Agendamento de treinos, mensagens automatizadas e relatórios de entrega",
+      },
+      {
+        en: "Authentication, async jobs, testing, migrations and CI/CD",
+        "pt-BR": "Autenticação, jobs assíncronos, testes, migrations e CI/CD",
+      },
+      {
+        en: "Next.js and TypeScript product frontend",
+        "pt-BR": "Frontend do produto em Next.js e TypeScript",
+      },
     ],
   },
   {
-    id: "icu-monitoring",
+    id: "healthcare-monitoring",
     number: "02",
     name: {
-      en: "ICU Monitoring System",
-      "pt-BR": "Sistema de Monitoramento de UTI",
+      en: "Hospital Monitoring Systems",
+      "pt-BR": "Sistemas de Monitoramento Hospitalar",
     },
     domain: {
       en: "HEALTHCARE / COMPUTER VISION",
       "pt-BR": "SAÚDE / VISÃO COMPUTACIONAL",
     },
     description: {
-      en: "Healthcare monitoring system composed of three Flutter applications and shared Python services for ICU workflows.",
-      "pt-BR": "Sistema de monitoramento em saúde composto por três aplicações Flutter e serviços Python compartilhados para fluxos de UTI.",
+      en: "Separate healthcare products with Flutter applications and shared Python services supporting hospital monitoring workflows, presented without confidential product names.",
+      "pt-BR":
+        "Produtos independentes de saúde com aplicações Flutter e serviços Python compartilhados para fluxos de monitoramento hospitalar, apresentados sem nomes confidenciais.",
     },
     scale: [
-      { value: "12", label: { en: "hospital beds", "pt-BR": "leitos hospitalares" } },
-      { value: "10", label: { en: "healthcare professionals", "pt-BR": "profissionais de saúde" } },
-      { value: "3", label: { en: "developers led", "pt-BR": "desenvolvedores liderados" } },
+      {
+        value: "12",
+        label: { en: "hospital beds", "pt-BR": "leitos hospitalares" },
+      },
+      {
+        value: "10",
+        label: {
+          en: "healthcare professionals",
+          "pt-BR": "profissionais de saúde",
+        },
+      },
+      {
+        value: "3",
+        label: { en: "developers led", "pt-BR": "desenvolvedores liderados" },
+      },
+      {
+        value: "1",
+        label: { en: "hospital pilot", "pt-BR": "piloto hospitalar" },
+      },
     ],
     role: {
       en: "Backend Engineer / Technical lead",
       "pt-BR": "Engenheiro Backend / Líder técnico",
     },
-    stack: ["Python", "Flask", "OCR", "Computer Vision"],
+    stack: ["Python", "Flask", "Flutter", "OCR", "Computer Vision", "GCP"],
     responsibilities: [
-      { en: "Backend architecture and shared services", "pt-BR": "Arquitetura backend e serviços compartilhados" },
-      { en: "Team leadership across three developers", "pt-BR": "Liderança técnica de três desenvolvedores" },
-      { en: "Computer vision and OCR integration for medical monitor data", "pt-BR": "Integração de visão computacional e OCR para dados de monitores médicos" },
+      {
+        en: "Shared Python services and API design",
+        "pt-BR": "Serviços Python compartilhados e design de APIs",
+      },
+      {
+        en: "Architecture, code review and delivery leadership",
+        "pt-BR": "Arquitetura, revisão de código e liderança de entregas",
+      },
+      {
+        en: "OCR integration for medical monitor data",
+        "pt-BR": "Integração de OCR para dados de monitores médicos",
+      },
+      {
+        en: "Client-facing requirements and technical decisions",
+        "pt-BR": "Requisitos junto ao cliente e decisões técnicas",
+      },
     ],
   },
   {
     id: "enterprise-management",
     number: "03",
     name: {
-      en: "Enterprise Management Platform",
-      "pt-BR": "Plataforma de Gestão Corporativa",
+      en: "Enterprise Questionnaire & Analytics Platform",
+      "pt-BR": "Plataforma Corporativa de Questionários e Analytics",
     },
     domain: {
-      en: "ENTERPRISE",
-      "pt-BR": "CORPORATIVO",
+      en: "ENTERPRISE / GREENFIELD",
+      "pt-BR": "CORPORATIVO / GREENFIELD",
     },
     description: {
-      en: "Enterprise management platform composed of 12 business modules and used by approximately 1,500 users.",
-      "pt-BR": "Plataforma de gestão corporativa composta por 12 módulos de negócio e utilizada por aproximadamente 1.500 usuários.",
+      en: "Internal platform built from scratch to replace Google Forms with managed questionnaires and first-party analytics.",
+      "pt-BR":
+        "Plataforma interna construída do zero para substituir o Google Forms por questionários gerenciados e analytics próprio.",
     },
     scale: [
-      { value: "12", label: { en: "business modules", "pt-BR": "módulos de negócio" } },
+      {
+        value: "12",
+        label: { en: "business modules", "pt-BR": "módulos de negócio" },
+      },
       { value: "~1,500", label: { en: "users", "pt-BR": "usuários" } },
+      { value: "100,000+", label: { en: "responses", "pt-BR": "respostas" } },
     ],
     role: {
-      en: "Software Engineer / Contributor",
-      "pt-BR": "Engenheiro de Software / Contribuidor",
+      en: "Software Engineer / Client-facing contributor",
+      "pt-BR": "Engenheiro de Software / Contribuidor junto ao cliente",
     },
-    stack: ["Java", "React"],
+    stack: ["React", "Java", "REST APIs"],
     responsibilities: [
-      { en: "Contribution to enterprise workflows and modules", "pt-BR": "Contribuição para fluxos e módulos corporativos" },
-      { en: "Backend and application development within a larger team", "pt-BR": "Desenvolvimento backend e de aplicações em uma equipe maior" },
+      {
+        en: "React screen implementation",
+        "pt-BR": "Implementação de telas React",
+      },
+      {
+        en: "Client communication and requirements gathering",
+        "pt-BR": "Comunicação com clientes e levantamento de requisitos",
+      },
+      {
+        en: "Technical decisions in a greenfield system",
+        "pt-BR": "Decisões técnicas na construção de um novo sistema",
+      },
     ],
   },
 ] as const satisfies readonly System[]

@@ -17,20 +17,13 @@ Public content lives in `constants/`:
 - `experience.ts` - roles, dates, responsibilities and technologies
 - `systems.ts` - selected systems, verified metrics and scope of contribution
 - `stack.ts` - technical stack grouped by priority
-- `earlier-work.ts` - biomedical and embedded systems experience
+- `activities.ts` - robotics activities shown on the site only
 - `contact.ts` - public links and resume filename
 - `l10n.ts` - interface labels and translations
 
 Dates are stored as ISO values. Current roles use `endDate: null`, and durations are formatted during rendering so time-sensitive copy does not need to be duplicated in components.
 
 ## Commands
-
-```bash
-npm run dev
-npm run lint
-npm run typecheck
-npm run build
-```
 
 `Ctrl + K` opens the optional command palette. The conventional navigation remains the primary way to access the site.
 

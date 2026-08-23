@@ -1,3 +1,4 @@
+export { activities } from "./activities"
 export { contact } from "./contact"
 export { experience } from "./experience"
 export { defaultLocale, localeLabels, localeNames, supportedLocales, translate, uiCopy } from "./l10n"
@@ -7,6 +8,7 @@ export { stackGroups } from "./stack"
 export { systems } from "./systems"
 export type {
   DateRange,
+  Activity,
   ExperienceEntry,
   ExperienceRole,
   Locale,

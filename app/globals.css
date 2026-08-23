@@ -854,6 +854,39 @@ main {
   transform: scale(1.06);
 }
 
+.activities-list {
+  margin-top: clamp(2rem, 4vw, 4rem);
+}
+
+.activity-entry {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.35fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--line-strong);
+}
+
+.activity-result {
+  color: var(--accent);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+}
+
+.activity-entry h3 {
+  color: var(--text);
+  font-size: clamp(1.35rem, 2vw, 2rem);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+}
+
+.activity-entry h3 + p {
+  max-width: 680px;
+  margin-top: 0.55rem;
+  color: var(--muted);
+}
+
 .contact-section {
   padding-bottom: 2rem;
 }
@@ -1137,7 +1170,8 @@ main {
 
   .section-header-meta,
   .role-item,
-  .stack-group {
+  .stack-group,
+  .activity-entry {
     grid-template-columns: 1fr;
     gap: 1.25rem;
   }

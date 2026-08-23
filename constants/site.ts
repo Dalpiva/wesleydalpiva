@@ -4,8 +4,8 @@ export const site = {
   name: "Wesley Dalpiva",
   url: "https://wesleydalpiva.com",
   defaultLocale: "en" as const,
-  contentLastUpdated: "2026-08-19",
-  professionalExperienceStartDate: "2022-08-01",
+  contentLastUpdated: "2026-08-21",
+  professionalExperienceStartDate: "2021-08-01",
   profileImage: {
     src: "/perfil.png",
     width: 1254,
@@ -17,58 +17,73 @@ export const site = {
   } satisfies LocalizedText,
   hero: {
     eyebrow: {
-      en: "Backend systems / architecture to production",
-      "pt-BR": "Sistemas backend / da arquitetura à produção",
+      en: "Python backend / architecture to production",
+      "pt-BR": "Backend Python / da arquitetura à produção",
     } satisfies LocalizedText,
     title: {
       en: "Backend Software Engineer",
       "pt-BR": "Engenheiro de Software Backend",
     } satisfies LocalizedText,
     summary: {
-      en: "I build and own backend systems from architecture through production. {years} years working across healthcare, sports, smart cities and enterprise software.",
-      "pt-BR": "Construo e assumo a responsabilidade por sistemas backend, da arquitetura à produção. {years} anos trabalhando com saúde, esportes, cidades inteligentes e software corporativo.",
+      en: "I build Python backend systems from architecture to production. {years} across healthcare, sports, smart cities and enterprise software, with 5 greenfield products delivered alongside clients.",
+      "pt-BR":
+        "Construo sistemas backend em Python da arquitetura à produção. {years} anos de experiência em saúde, esportes, cidades inteligentes e software corporativo. 5 produtos desenvolvidos do zero em parceria com clientes.",
     } satisfies LocalizedText,
-    keywords: ["PYTHON", "APIs", "DATABASES", "CLOUD"],
+    keywords: ["PYTHON", "FLASK", "APIs", "GCP"],
   },
   sections: {
     experience: {
       title: {
-        en: "Ownership is the through-line.",
-        "pt-BR": "Responsabilidade é o fio condutor.",
+        en: "Backend ownership, measurable outcomes.",
+        "pt-BR": "Responsabilidade backend, impacto mensurável.",
       } satisfies LocalizedText,
       intro: {
-        en: "From requirements and architecture to deployment and maintenance, the work stays close to the system's full lifecycle.",
-        "pt-BR": "De requisitos e arquitetura até deploy e manutenção, o trabalho acompanha todo o ciclo de vida do sistema.",
+        en: "I take systems from ambiguous requirements to tested APIs, cloud deployment and long-term operation.",
+        "pt-BR":
+          "Levo sistemas de requisitos ambíguos a APIs testadas, deploy em cloud e operação contínua.",
       } satisfies LocalizedText,
     },
     systems: {
       title: {
-        en: "Systems by domain and impact.",
-        "pt-BR": "Sistemas por domínio e impacto.",
+        en: "Recent systems, real constraints.",
+        "pt-BR": "Sistemas recentes, restrições reais.",
       } satisfies LocalizedText,
       intro: {
-        en: "Selected production projects presented through the problem, domain and technical responsibility while preserving confidential information.",
-        "pt-BR": "Projetos selecionados em produção, apresentados pelo problema, domínio e responsabilidade técnica, preservando informações confidenciais.",
+        en: "Three recent products presented through the problem, scale and technical responsibility while preserving confidential information.",
+        "pt-BR":
+          "Três produtos recentes apresentados pelo problema, escala e responsabilidade técnica, preservando informações confidenciais.",
       } satisfies LocalizedText,
     },
     stack: {
       title: {
-        en: "The tools follow the problem.",
-        "pt-BR": "As ferramentas seguem o problema.",
+        en: "The backend is the center of gravity.",
+        "pt-BR": "Backend é o centro de gravidade.",
       } satisfies LocalizedText,
       intro: {
-        en: "Backend engineering is the center of gravity. The rest supports the systems around it.",
-        "pt-BR": "Engenharia backend é o centro de gravidade. O restante dá suporte aos sistemas ao redor.",
+        en: "The stack reflects the work that takes Python services from API design to reliable production delivery.",
+        "pt-BR":
+          "A stack reflete o trabalho que leva serviços Python do design de APIs a uma entrega confiável em produção.",
+      } satisfies LocalizedText,
+    },
+    additional: {
+      title: {
+        en: "Beyond the production backlog.",
+        "pt-BR": "Além do backlog de produção.",
+      } satisfies LocalizedText,
+      intro: {
+        en: "Hands-on engineering outside day-to-day product delivery.",
+        "pt-BR": "Engenharia prática além da entrega diária de produtos.",
       } satisfies LocalizedText,
     },
     contact: {
       title: {
-        en: "Have a system to build?",
-        "pt-BR": "Tem um sistema para construir?",
+        en: "Open to backend opportunities.",
+        "pt-BR": "Aberto a oportunidades backend.",
       } satisfies LocalizedText,
       intro: {
-        en: "For backend engineering, architecture, production systems or a good technical conversation:",
-        "pt-BR": "Para engenharia backend, arquitetura, sistemas de produção ou uma boa conversa técnica:",
+        en: "For Python backend engineering, APIs, architecture, production systems or a good technical conversation:",
+        "pt-BR":
+          "Para engenharia backend em Python, APIs, arquitetura, sistemas de produção ou uma boa conversa técnica:",
       } satisfies LocalizedText,
     },
   },

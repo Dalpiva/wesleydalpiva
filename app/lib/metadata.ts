@@ -10,8 +10,8 @@ export function createMetadata(locale: Locale): Metadata {
     ? "Wesley Dalpiva - Engenheiro de Software Backend"
     : "Wesley Dalpiva - Backend Software Engineer"
   const description = isPortuguese
-    ? "Portfólio de Wesley Dalpiva, engenheiro de software backend focado em Python, APIs, bancos de dados, cloud e sistemas de produção."
-    : "Wesley Dalpiva is a Backend Software Engineer focused on Python, APIs, databases, cloud infrastructure and production systems."
+    ? "Portfólio de Wesley Dalpiva, engenheiro de software backend focado em Python, Flask, APIs, Firestore, GCP e sistemas de produção."
+    : "Wesley Dalpiva is a Backend Software Engineer focused on Python, Flask, APIs, Firestore, GCP and production systems."
   const path = isPortuguese ? "/pt" : "/"
 
   return {
@@ -23,10 +23,10 @@ export function createMetadata(locale: Locale): Metadata {
       "Backend Software Engineer",
       "Backend Engineer",
       "Python",
+      "Flask",
       "REST APIs",
-      "Databases",
-      "Cloud",
-      "Microservices",
+      "Firestore",
+      "Google Cloud Platform",
       "Healthcare Software",
     ],
     authors: [{ name: site.name, url: site.url }],

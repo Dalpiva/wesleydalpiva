@@ -51,3 +51,10 @@ export type StackGroup = {
   readonly priority: "primary" | "secondary"
   readonly items: readonly string[]
 }
+
+export type Activity = {
+  readonly id: string
+  readonly title: LocalizedText
+  readonly result: LocalizedText
+  readonly description: LocalizedText
+}
