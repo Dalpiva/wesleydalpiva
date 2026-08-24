@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { contact } from "@/constants/contact"
-import { translate, uiCopy } from "@/constants/l10n"
+import { translate } from "@/constants/l10n"
 import { site } from "@/constants/site"
 import type { Locale } from "@/constants/types"
 
@@ -43,14 +43,6 @@ export function createMetadata(locale: Locale): Metadata {
       description,
       url: `${site.url}${path}`,
       siteName: site.name,
-      images: [
-        {
-          url: site.profileImage.src,
-          width: site.profileImage.width,
-          height: site.profileImage.height,
-          alt: uiCopy[locale].profileImageAlt,
-        },
-      ],
       locale: isPortuguese ? "pt_BR" : "en_US",
       type: "website",
     },
@@ -58,7 +50,6 @@ export function createMetadata(locale: Locale): Metadata {
       card: "summary_large_image",
       title,
       description,
-      images: [site.profileImage.src],
     },
     robots: {
       index: true,

@@ -5,10 +5,14 @@ export default function sitemap() {
     {
       url: site.url,
       lastModified: site.contentLastUpdated,
+      changeFrequency: "monthly" as const,
+      priority: 1,
     },
     {
       url: `${site.url}/pt`,
       lastModified: site.contentLastUpdated,
+      changeFrequency: "monthly" as const,
+      priority: 1,
     },
   ]
 }

@@ -7,7 +7,7 @@ export const site = {
   contentLastUpdated: "2026-08-21",
   professionalExperienceStartDate: "2021-08-01",
   profileImage: {
-    src: "/perfil.png",
+    src: "/perfil.webp",
     width: 1254,
     height: 1254,
   },
@@ -27,7 +27,7 @@ export const site = {
     summary: {
       en: "I build Python backend systems from architecture to production. {years} across healthcare, sports, smart cities and enterprise software, with 5 greenfield products delivered alongside clients.",
       "pt-BR":
-        "Construo sistemas backend em Python da arquitetura à produção. {years} anos de experiência em saúde, esportes, cidades inteligentes e software corporativo. 5 produtos desenvolvidos do zero em parceria com clientes.",
+        "Construo sistemas backend em Python da arquitetura à produção. {years} de experiência em saúde, esportes, cidades inteligentes e software corporativo. 5 produtos desenvolvidos do zero em parceria com clientes.",
     } satisfies LocalizedText,
     keywords: ["PYTHON", "FLASK", "APIs", "GCP"],
   },

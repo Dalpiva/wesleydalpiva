@@ -18,7 +18,6 @@ type PortfolioPageProps = {
 export default function PortfolioPage({ locale }: PortfolioPageProps) {
   const years = formatYears(fullYearsSince(site.professionalExperienceStartDate), locale)
   const personSchema = {
-    "@context": "https://schema.org",
     "@type": "Person",
     name: site.name,
     jobTitle: translate(site.role, locale),
@@ -26,8 +25,23 @@ export default function PortfolioPage({ locale }: PortfolioPageProps) {
     image: `${site.url}${site.profileImage.src}`,
     email: `mailto:${contact.email}`,
     sameAs: contact.links.map((link) => link.href),
+    knowsLanguage: ["en", "pt-BR"],
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "BR",
+    },
     description: interpolate(translate(site.hero.summary, locale), { years }),
   }
+  const websiteSchema = {
+    "@type": "WebSite",
+    name: site.name,
+    url: site.url,
+    inLanguage: locale,
+  }
+  const schema = JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [personSchema, websiteSchema],
+  })
 
   return (
     <>
@@ -45,7 +59,7 @@ export default function PortfolioPage({ locale }: PortfolioPageProps) {
       </main>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        dangerouslySetInnerHTML={{ __html: schema }}
       />
     </>
   )
