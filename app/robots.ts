@@ -1,3 +1,5 @@
+import { site } from "@/constants/site"
+
 export default function robots() {
   return {
     rules: [
@@ -6,6 +8,6 @@ export default function robots() {
         allow: "/",
       },
     ],
-    sitemap: "https://wesleydalpiva.com/sitemap.xml",
-  };
+    sitemap: `${site.url}/sitemap.xml`,
+  }
 }

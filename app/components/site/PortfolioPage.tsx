@@ -1,0 +1,66 @@
+import { contact } from "@/constants/contact"
+import { translate, uiCopy } from "@/constants/l10n"
+import { site } from "@/constants/site"
+import type { Locale } from "@/constants/types"
+import { formatYears, fullYearsSince, interpolate } from "@/app/lib/formatters"
+import ContactSection from "./ContactSection"
+import ActivitiesSection from "./ActivitiesSection"
+import ExperienceSection from "./ExperienceSection"
+import HeroSection from "./HeroSection"
+import SiteHeader from "./SiteHeader"
+import StackSection from "./StackSection"
+import SystemsSection from "./SystemsSection"
+
+type PortfolioPageProps = {
+  locale: Locale
+}
+
+export default function PortfolioPage({ locale }: PortfolioPageProps) {
+  const years = formatYears(fullYearsSince(site.professionalExperienceStartDate), locale)
+  const personSchema = {
+    "@type": "Person",
+    name: site.name,
+    jobTitle: translate(site.role, locale),
+    url: site.url,
+    image: `${site.url}${site.profileImage.src}`,
+    email: `mailto:${contact.email}`,
+    sameAs: contact.links.map((link) => link.href),
+    knowsLanguage: ["en", "pt-BR"],
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "BR",
+    },
+    description: interpolate(translate(site.hero.summary, locale), { years }),
+  }
+  const websiteSchema = {
+    "@type": "WebSite",
+    name: site.name,
+    url: site.url,
+    inLanguage: locale,
+  }
+  const schema = JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [personSchema, websiteSchema],
+  })
+
+  return (
+    <>
+      <a className="skip-link" href="#main-content">
+        {uiCopy[locale].skipToContent}
+      </a>
+      <SiteHeader locale={locale} />
+      <main id="main-content">
+        <HeroSection locale={locale} />
+        <SystemsSection locale={locale} />
+        <ExperienceSection locale={locale} />
+        <StackSection locale={locale} />
+        <ActivitiesSection locale={locale} />
+        <ContactSection locale={locale} />
+      </main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: schema }}
+      />
+    </>
+  )
+}
